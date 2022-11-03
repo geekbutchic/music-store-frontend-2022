@@ -2,16 +2,16 @@ import * as React from "react";
 import { Card, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/system";
+import { AccountCircle } from "@mui/icons-material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { AccountCircle } from "@mui/icons-material";
 
 export default function Header(props) {
   const { user } = props;
-  console.log(`USER PROPS: `, props);
+  // console.log(`USER PROPS: `, props);
   return (
     <Card>
       <AppBar

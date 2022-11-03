@@ -11,7 +11,11 @@ import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 
 const ProductScreen = (props) => {
-  const { productData } = props;
+  const { productData, addToCart } = props;
+
+  const onAddToCart = () => {
+    addToCart(productData);
+  };
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -31,7 +35,7 @@ const ProductScreen = (props) => {
       </CardContent>
       <CardActions disableSpacing>
         <Box display="flex" justifyContent="space-between" width={1}>
-          <Button>ADD TO CART</Button>
+          <Button onClick={onAddToCart}>ADD TO CART</Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>

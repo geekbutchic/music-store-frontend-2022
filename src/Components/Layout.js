@@ -3,7 +3,6 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { Box } from "@mui/system";
 
-
 // Component is a function that returns elements
 const Layout = (props) => {
   const { children, user } = props;
@@ -11,11 +10,11 @@ const Layout = (props) => {
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
       <Box>
-        <Header user={user}/>
+        <Header user={user} />
       </Box>
       <Box flexGrow={1} py={6} px={4}>
         {children}
-        </Box>
+      </Box>
       <Box>
         <Footer />
       </Box>

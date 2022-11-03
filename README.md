@@ -248,4 +248,5 @@ To Note: Example of Prop Drilling before context is used.
 ### STEP 11.
 
 * Shopping cart component.  Global State so it can passed to all children. # music-store-frontend-2022
+* Context 
 

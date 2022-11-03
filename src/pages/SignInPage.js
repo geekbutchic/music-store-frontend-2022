@@ -20,8 +20,8 @@ const SignInPage = (props) => {
     <Layout user={user}>
         <Box>
         <Typography>
-            Hi
-        {user.firstName}
+            Hi...
+        {user.firstName}{" "}{user.lastName}!!!
         </Typography>
         </Box>
         <Button onClick={signOut}>Sign Out</Button>
