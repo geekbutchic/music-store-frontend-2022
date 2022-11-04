@@ -6,8 +6,6 @@ import Layout from "../Components/Layout";
 import Axios from "../utils/Axios";
 
 const UserRegistrationPage = () => {
-
-
   const [userRegistrationForm, setUserRegistrationForm] = useState({
     firstName: "",
     lastName: "",
@@ -19,10 +17,9 @@ const UserRegistrationPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await Axios.post(`/register-user`, {
-      ...userRegistrationForm,
+      ...userRegistrationForm
     });
-    const {user} = response.data;
-    
+    const { user } = response.data;
   };
 
   return (

@@ -9,9 +9,13 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-export default function Header(props) {
-  const { user } = props;
-  // console.log(`USER PROPS: `, props);
+//USE CONTEXT PROVIDER
+import { useContext } from "react";
+import { userContext } from "../context/userContext";
+
+export default function Header() {
+  const { user } = useContext(userContext);
+
   return (
     <Card>
       <AppBar

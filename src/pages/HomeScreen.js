@@ -1,17 +1,20 @@
-import React from "react";
 import productList from "../Data/data";
 import Layout from "../Components/Layout";
 import ProductScreen from "./ProductScreen";
 import { Box } from "@mui/system";
 
-const HomeScreen = (props) => {
-  const { user, addToCart } = props;
+import React, { useContext } from "react";
+import { cartContext } from "../context/cartContext";
+
+const HomeScreen = () => {
+  const { addToCart } = useContext(cartContext);
+
   return (
-    <Layout user={user}>
+    <Layout>
       <Box display="flex" flexDirection="column" alignItems="center">
         {productList.map((product) => (
           <Box mb={4} key={product.id}>
-            <ProductScreen productData={product} addToCart={addToCart}/>
+            <ProductScreen productData={product} addToCart={addToCart} />
           </Box>
         ))}
       </Box>

@@ -3,8 +3,13 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import Layout from "../Components/Layout";
 import sampleUserData from "../Data/data-2";
 
-const SignInPage = (props) => {
-    const { user, signIn, signOut} = props;
+//USE CONTEXT
+import { useContext } from "react";
+import { userContext } from "../context/userContext";
+
+const SignInPage = () => {
+  const { user, signIn, signOut } = useContext(userContext);
+
   const [signInForm, setSignInForm] = useState({
     email: "",
     password: ""
@@ -12,20 +17,20 @@ const SignInPage = (props) => {
 
   //USER NEEDS TO BE LOGGED IN
   const onSubmit = () => {
-    signIn(sampleUserData)
+    signIn(sampleUserData);
   };
 
-  if(user) {
-    return(
-    <Layout user={user}>
+  if (user) {
+    return (
+      <Layout user={user}>
         <Box>
-        <Typography>
+          <Typography>
             Hi...
-        {user.firstName}{" "}{user.lastName}!!!
-        </Typography>
+            {user.firstName} {user.lastName}!!!
+          </Typography>
         </Box>
         <Button onClick={signOut}>Sign Out</Button>
-    </Layout>
+      </Layout>
     );
   }
 

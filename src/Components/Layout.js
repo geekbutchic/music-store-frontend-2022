@@ -5,12 +5,12 @@ import { Box } from "@mui/system";
 
 // Component is a function that returns elements
 const Layout = (props) => {
-  const { children, user } = props;
+  const { children } = props;
 
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
       <Box>
-        <Header user={user} />
+        <Header />
       </Box>
       <Box flexGrow={1} py={6} px={4}>
         {children}
